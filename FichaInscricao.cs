@@ -5,10 +5,10 @@ namespace M1S02_Ex2
     {
         public int Id { get; set;}
         public string Nome { get; set;}
-        public DateTime DataNascimento { get; set;}
+        public string DataNascimento { get; set;}
         public bool MenorIdade { get; set;}
 
-        public FichaInscricao(int id, string nome, DateTime dataNascimento, bool menorIdade ) 
+        public FichaInscricao(int id, string nome, string dataNascimento, bool menorIdade ) 
         {
             Id = id;
             Nome = nome;
@@ -16,10 +16,22 @@ namespace M1S02_Ex2
             MenorIdade = menorIdade;              
         }
 
+        public string ValidaIdade()
+        {
+
+if (MenorIdade == true)
+            {
+                return "Sim";
+            }
+else
+            {
+                return "Não";
+            }
+        }
 
 public void RetornaTexto() 
         {
-    Console.WriteLine($" Nome {Nome}, Data Nascimento {DataNascimento}");
+    Console.WriteLine($"Código: {Id}, Nome: {Nome}, Data Nascimento: {DataNascimento}. Menor de idade? {ValidaIdade()}");
         }
 }
 }
