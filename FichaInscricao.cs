@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace M1S02_Ex2
 {
     public class FichaInscricao
@@ -11,7 +8,7 @@ namespace M1S02_Ex2
         public DateTime DataNascimento { get; set;}
         public bool MenorIdade { get; set;}
 
-        public FichaInscricao(int id, string nome, dataNascimento datetime dataNascimento, bool menorIdade ) 
+        public FichaInscricao(int id, string nome, DateTime dataNascimento, bool menorIdade ) 
         {
             Id = id;
             Nome = nome;
@@ -22,7 +19,7 @@ namespace M1S02_Ex2
 
 public void RetornaTexto() 
         {
-    Console.WriteLine($" Nome {nome}, Data Nascimento {dataNascimento}");
+    Console.WriteLine($" Nome {Nome}, Data Nascimento {DataNascimento}");
         }
 }
 }
